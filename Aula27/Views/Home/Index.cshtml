@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<h1>ToDo List</h1>
+<div class="container">
+  <div class="row">
+    <div class="col">
+<input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Add Task...">
+    </div>
+    <div class="col-auto">
+<button type="submit" class="btn btn-primary mb-3">+</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="row"><h2>  My Task</h2></div>
+
+@{
+    string[] tarefas = { "delectus aut autem", "uis ut nam facilis et officia qui", 
+        "fugial veniam minus", "et porro tempora", 
+        "laborisam militia et enim quasi adipisci quia privident illum" };
+    }
+        
+                             
+
+            <ul class="list-group">
+ 
+                @foreach(string tarefa in tarefas)
+                { 
+                    
+                        <li class="list-group-item">
+                           <div class="row">
+                               <div class="col-auto">
+                                    <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">  
+                               </div>
+                               <div class="col">
+                                      @tarefa
+                               </div>
+                               <div class="col-auto">
+                                     <label class="btn btn-outline-danger" for="danger-outlined">Delete</label>
+                               </div>
+                           </div> 
+                    
+                            </li>
+                            
+    }
+
+            </ul>
+          
+
